@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasem Alkhashti - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars-container" id="stars-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="images/logo2.png" class="nav-logo-icon">
+                    Jasem Alkhashti
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Jasem</span></h1>
+                <p class="hero-subtitle">Computer Engineer & Creative Problem Solver</p>
+                <p class="hero-description">
+                    I design circuits, develop programs, and solve problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Jasem Alkhashti" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Jasem has experience in Python, VHDL, Verilog, C++, C, JavaScript, Java, and more. A fast, enthusiastic learner, he thrives on logical problem-solving and eagerly embraces new challenges.
+                        He mainly works with FPGAs and embedded systems, but he is also interested in quant finance, data science, and machine learning.
+                    </p>
+                    <p>
+                        Jasem is a recent graduate of the University of Miami, where he earned a Bachelor of Science in Computer Engineering and developed a strong foundation in hardware design, embedded systems, and parallel computing. During his undergraduate studies, he served as a teaching assistant for both Computer Organization and Design and Digital Design Laboratory, roles that sharpened his ability to explain complex concepts, guide lab work, and mentor fellow students through hands-on projects. In addition to his academic pursuits, he holds a Private Pilot License, which has further strengthened his discipline, situational awareness, and decision-making under pressure. 
+                    </p>
+                    <p>
+                        During his time at Miami, Jasem also embraced several student leadership roles, serving as Treasurer of Tau Beta Pi, Designated Lead for the NVIDIA Student Network Program, Manager of Internal & External Affairs for Eta Kappa Nu, and as an Engineering Student Ambassador. These positions allowed him to cultivate teamwork, organizational management, and outreach skills while supporting his fellow students and the broader engineering community. He is also deeply interested in quantitative finance and is eager to explore how his hardware expertise can bring a fresh perspective to data-driven modeling and algorithmic trading.
+                    </p>
+                    <p>
+                        This fall, Jasem will be pursuing a Master of Engineering in Systems Engineering at Cornell University, where he plans to deepen his expertise in systems optimization, risk analysis, and quantitative modeling. He looks forward to applying a holistic, systems-level approach to real-world challenges, whether improving computational workflows, streamlining complex processes, or innovating at the intersection of hardware and finance.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">VHDL</span>
+                            <span class="skill-tag">Verilog</span>
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">ARM Assembly</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">BCPL</span>
+
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">DE1-SoC</span>
+                            <span class="skill-tag">Intel Aria 10 GX</span>
+                            <span class="skill-tag">NEXYS 4</span>
+                            <span class="skill-tag">Vivado</span>
+                            <span class="skill-tag">Quartus</span>
+                            <span class="skill-tag">ModelSim</span>
+                            <span class="skill-tag">MySQL Workbench</span>
+                            <span class="skill-tag">Unix</span>
+                            <span class="skill-tag">Arduino IDE</span>
+                            <span class="skill-tag">PSpice</span>
+                            <span class="skill-tag">VSCode</span>
+                            <span class="skill-tag">PyCharm</span>
+                            <span class="skill-tag">IntelliJ IDEA</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Resume</h3>
+                        <div class="resume-card">
+                            <div class="resume-preview">
+                                <iframe src="attachements/Jasem_Alkhashti_Resume_4.pdf" width="100%" height="400px" title="Resume Preview"></iframe>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="attachements/Jasem_Alkhashti_Resume_4.pdf" class="resume-btn download-btn" download>
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                                <a href="attachements/Jasem_Alkhashti_Resume_4.pdf" class="resume-btn view-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/CPU.png" alt="MIPS Architecture RISC CPU">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MIPS Architecture RISC CPU</h3>
+                        <p class="project-description">
+                            Designed and implemented a 16-bit RISC CPU featuring a streamlined instruction set and simplified architecture, and used RTL viewer and waveform analysis to identify and resolve data-transfer and timing issues.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Verilog</span>
+                            <span class="tech-tag">Vivado</span>
+                            <span class="tech-tag">NEXYS 4</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/QPU.png" alt="Quantum Processing Unit">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quantum Processing Unit</h3>
+                        <p class="project-description">
+                            Designed a physics-based quantum emulation system on an FPGA that models the state evolution of qubits, leveraging the device's massive parallelism to perform matrix exponentiation in constant time (O(1)). To make this capability accessible, we also developed a user-friendly GUI that interfaces with the FPGA via GPIO pins over a modified SPI protocol, enabling real-time control of emulation parameters and live visualization of the results.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">VHDL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ModelSim</span>
+                            <span class="tech-tag">Quartus</span>
+                            <span class="tech-tag">Intel Aria 10 GX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/DSP.png" alt="Advanced Digital Signal Processor">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Advanced Digital Signal Processor</h3>
+                        <p class="project-description">
+                            implemented the ADSP-2100 digital signal processor to execute instruction-specific computations and integrated a Built-In Self-Test (BIST) architecture that generates signatures to identify and expose faults within the design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">VHDL</span>
+                            <span class="tech-tag">ModelSim</span>
+                            <span class="tech-tag">Quartus</span>
+                            <span class="tech-tag">DE1-SoC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Computer Organization and Design & Digital Design Laboratory Instructor</h3>
+                            <span class="company">University of Miami</span>
+                            <span class="period">Aug 2024 - May 2025</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Held weekly sessions lecturing and aiding over 45 students in designing and implementing complex dataflow projects in VHDL & Schematics.</li>
+                            <li>Provided assistance with debugging RTL simulations and verifications in large complex systems by hosting office hours multiple times a week.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Manager of Internal & External Affairs</h3>
+                            <span class="company">Eta Kappa Nu</span>
+                            <span class="period">Sep 2023 - May 2025</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Facilitated activities and events by proactively establishing partnerships with diverse student organizations, faculty departments, and external industry representatives; increased collaborative opportunities and boosted organizational visibility both on and off campus.</li>
+                            <li>Delivered personalized tutoring sessions in engineering coursework, enhancing academic performance among undergraduate students.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Engineering Student Ambassador</h3>
+                            <span class="company">University of Miami - College of Engineering</span>
+                            <span class="period">Jan 2024 - May 2025</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Participated in student panels, providing valuable information to 50+ prospective students and their families about UMs College of Engineering.</li>
+                            <li>Led informative tours for prospective students, highlighting the CoE's facilities, resources, and student life to aid in their decision-making process.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Treasurer</h3>
+                            <span class="company">Tau Beta Pi</span>
+                            <span class="period">Sep 2024 - May 2025</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Managed the organization's financial operations, including budgeting, expense tracking, and fund allocation to ensure financial sustainability.</li>
+                            <li>Oversaw fundraising efforts and coordinated financial planning for events, contributing to the growth and success of chapter activities.</li>
+                            <li>Ensured allocation of travel funds to national conferences, strengthening connections with other chapters & representing UMs chapter.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Engineering Researcher</h3>
+                            <span class="company">Bonsai</span>
+                            <span class="period">Jan 2025 - May 2025</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Conducted interdisciplinary research in physics, collaborating with faculty and peers to explore computational models and experimental techniques.</li>
+                            <li>Worked with large datasets to conduct statistical analysis, identifying patterns & providing actionable insights for physics-based applications.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>NVIDIA Student Network Program - Designated Lead</h3>
+                            <span class="company">NVIDIA</span>
+                            <span class="period">Jan 2025 - Present</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Spearheaded the NVIDIA Student Network program for Eta Kappa Nu, facilitating access to exclusive AI training, tools, and hands-on projects in data science, computer vision, speech AI, and more.</li>
+                            <li>Worked with NVIDIA to organize workshops and events, offering skill-building sessions and career development opportunities.</li>
+                            <li>Fostered a dynamic environment for students, promoting resources and encouraging participation in AI initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            jasemalkhashti@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/jasemalkhashti" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/JasemAlkhashti" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jasem Alkhashti. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

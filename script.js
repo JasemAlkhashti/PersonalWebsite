@@ -109,36 +109,51 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Contact form handling
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        
-        // Basic validation
-        if (!name || !email || !message) {
-            alert('Please fill in all fields');
-            return;
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form[action^="https://formspree.io"]');
+  const modal = document.getElementById('thankyou-modal');
+
+  if (form) {
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Show modal
+          modal.style.display = 'flex';
+          setTimeout(() => {
+            modal.classList.add('active');
+          }, 10);
+
+          // Clear form
+          form.reset();
+
+          // Hide modal after 2 seconds
+          setTimeout(() => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 400); // matches CSS transition
+          }, 2000);
+        } else {
+          alert('There was a problem sending your message. Please try again.');
         }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-        
-        // Here you would typically send the form data to a server
-        // For now, we'll just show a success message
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        this.reset();
+      } catch (error) {
+        alert('There was a problem sending your message. Please try again.');
+      }
     });
-}
+  }
+});
 
 // Project card hover effects
 document.querySelectorAll('.project-card').forEach(card => {

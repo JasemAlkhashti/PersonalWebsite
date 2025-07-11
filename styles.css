@@ -966,3 +966,44 @@ html {
         justify-content: center;
     }
 } 
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(20,20,20,0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal-content {
+    background: #181818;
+    color: #fff;
+    border-radius: 24px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    text-align: center;
+    min-width: 280px;
+    max-width: 90vw;
+    transform: translateY(40px) scale(0.98);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  }
+  .modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  .modal-content svg {
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

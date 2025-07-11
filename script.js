@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Contact form handling
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('form[action^="https://formspree.io"]');
+  const form = document.querySelector('form[action^="https://formspree.io/f/xkgblbvk"]');
   const modal = document.getElementById('thankyou-modal');
 
   if (form) {

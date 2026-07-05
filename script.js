@@ -50,16 +50,60 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleIcon = themeToggle ? themeToggle.querySelector('i') : null;
+const themeToggleLabel = themeToggle ? themeToggle.querySelector('span') : null;
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+function applyTheme(theme) {
+    const selectedTheme = theme === 'dark' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', selectedTheme);
+    window.localStorage.setItem('portfolio-theme', selectedTheme);
+
+    if (!themeToggle) {
+        return;
+    }
+
+    const isDark = selectedTheme === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+
+    if (themeToggleIcon) {
+        themeToggleIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    if (themeToggleLabel) {
+        themeToggleLabel.textContent = isDark ? 'Light' : 'Dark';
+    }
+}
+
+function initializeTheme() {
+    const savedTheme = window.localStorage.getItem('portfolio-theme');
+    const preferredTheme = savedTheme || 'light';
+    applyTheme(preferredTheme);
+}
+
+initializeTheme();
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+}
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    if (hamburger && navMenu) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 }));
 
 // Smooth scrolling for navigation links
@@ -79,14 +123,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar background change on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-        navbar.style.boxShadow = 'none';
+    if (navbar) {
+        navbar.classList.toggle('scrolled', window.scrollY > 100);
     }
 });
+
+const initialNavbar = document.querySelector('.navbar');
+if (initialNavbar) {
+    initialNavbar.classList.toggle('scrolled', window.scrollY > 100);
+}
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -220,12 +265,17 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
-        color: #ff4500 !important;
+        color: var(--accent) !important;
     }
     
     .nav-link.active::after {
         width: 100% !important;
-        background-color: #ff4500 !important;
+        background-color: var(--accent) !important;
+    }
+
+    .navbar.scrolled {
+        background: var(--navbar-bg-scrolled);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
     }
     
     body.loaded {
